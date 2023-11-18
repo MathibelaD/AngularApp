@@ -9,17 +9,20 @@
                 <div class="hidden md:block">
                     <!-- Navigation links -->
                     <ul class="flex space-x-4">
-                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Projects</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a></li>
+                        <li><a routerLink="/home"
+                                class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
+                        <li><a routerLink="/about"
+                                class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
+                        <li><a routerLink="/projects"
+                                class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">projects</a>
+                        </li>
+                        <li><a routerLink="/skills"
+                                class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Skills</a>
+                        </li>
+                        <li><a routerLink="/Contact"
+                                class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="hidden md:block">
-                <!-- Additional actions or buttons -->
-                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Login</a>
-                <!-- You can add more buttons or actions here -->
             </div>
             <!-- Mobile menu button (visible only on smaller screens) -->
             <div class="flex md:hidden items-center">
@@ -39,12 +42,14 @@
     <div id="mobile-menu" class="md:hidden hidden">
         <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <!-- Mobile navigation links -->
-            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
-            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Projects</a></li>
-            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
-            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a></li>
-            <!-- Mobile menu additional actions or buttons -->
-            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Login</a></li>
+            <li><a routerLink="/home" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
+            <li><a routerLink="/about" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
+            <li><a routerLink="/projects" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">projects</a>
+            </li>
+            <li><a routerLink="/skills" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Skills</a>
+            </li>
+            <li><a routerLink="/Contact" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a>
+            </li>
         </ul>
     </div>
 </nav>
