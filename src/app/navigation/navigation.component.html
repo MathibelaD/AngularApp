@@ -1,0 +1,50 @@
+<nav class="bg-gray-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Your logo or site title -->
+                    <a href="/" class="text-white font-bold text-xl">Your Portfolio</a>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Navigation links -->
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Projects</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <!-- Additional actions or buttons -->
+                <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md">Login</a>
+                <!-- You can add more buttons or actions here -->
+            </div>
+            <!-- Mobile menu button (visible only on smaller screens) -->
+            <div class="flex md:hidden items-center">
+                <button id="mobile-menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                    <!-- Icon for mobile menu -->
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden">
+        <ul class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <!-- Mobile navigation links -->
+            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Home</a></li>
+            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Projects</a></li>
+            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">About</a></li>
+            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Contact</a></li>
+            <!-- Mobile menu additional actions or buttons -->
+            <li><a href="#" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md">Login</a></li>
+        </ul>
+    </div>
+</nav>
