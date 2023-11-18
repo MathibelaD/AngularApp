@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hero',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
-
+  constructor(private TitleService: Title) {
+    this.TitleService.setTitle("Ms Mathibela - Home")
+  }
 }
