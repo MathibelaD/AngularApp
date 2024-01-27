@@ -9,6 +9,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { PdfService } from './pdf/pdf.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PdfService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
