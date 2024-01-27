@@ -10,7 +10,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PdfService } from './pdf/pdf.service';
-// import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { PdfService } from './pdf/pdf.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ScrollToModule.forRoot()
+    FormsModule
   ],
   providers: [PdfService],
   bootstrap: [AppComponent]
