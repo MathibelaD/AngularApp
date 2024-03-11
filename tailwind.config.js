@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.ts',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        peach: '#FFDAB9',
+      },
+    },
   },
   plugins: [],
 }
