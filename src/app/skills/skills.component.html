@@ -1,1 +1,25 @@
-<p>skills works!</p>
+<div class="p-4">
+    <h2 class="text-2xl text-center font-bold mb-4">Skills</h2>
+    <h6 class="text-center mb-2">Empowering Projects with Versatile Skills</h6>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mx-4 my-4 sm:my-14 sm:mx-20">
+      <!-- Frontend skills -->
+      <div *ngFor="let skill of getSkillsByCategory('frontend')" class="mb-2">
+        <p class="font-semibold">{{ skill.name }}</p>
+        <div class="w-full bg-gray-300 rounded-full">
+          <div class="bg-pink-500 text-xs leading-none py-0.5 text-center text-white rounded-full" [style.width.%]="skill.progress">
+            {{ skill.progress }}%
+          </div>
+        </div>
+      </div>
+      <!-- Backend skills -->
+      <div *ngFor="let skill of getSkillsByCategory('backend')" class="mb-2">
+        <p class="font-semibold">{{ skill.name }}</p>
+        <div class="w-full bg-gray-200 rounded-full">
+          <div class="bg-pink-500 text-xs leading-none py-0.5 text-center text-white rounded-full" [style.width.%]="skill.progress">
+            {{ skill.progress }}%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
