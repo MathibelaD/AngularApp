@@ -12,7 +12,7 @@ export class HeroComponent implements OnInit {
     this.titleService.setTitle("Ms Mathibela - Home");
   }
 
-  roles = ['Backend Developer', 'Frontend Developer'];
+  roles = ['Full Stack Developer', 'Qualified cloud Practitioner', 'Qualified SysOps Administrator'];
   currentRoleIndex = 0;
   typingSpeed = 150;
   textElement: HTMLElement | null = null;
