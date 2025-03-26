@@ -1,38 +1,63 @@
-<div class="bg-white  shadow-md rounded-lg p-4 m-10">
-    <p class="text-lg text-center font-bold">About Me</p>
-    <div class="flex">
-        <!-- Right column -->
-        <div class="w-1/2 p-4">
-            <p class="ml-5 text-pink-500 font-bold">Experience</p>
-            <div class="grid grid-cols-1 gap-4 text-white bg-purple-200 rounded-full p-2 mb-2">
-                <ul class="list-disc px-4">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+<section class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Experience Section -->
+        <div class="bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-6 text-indigo-700 border-b-2 border-indigo-200 pb-3 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M4 13.255V19a2 2 0 002 2h12a2 2 0 002-2v-5.745" />
+            </svg>
+            Professional Experience
+          </h2>
+          <div class="space-y-5">
+            <div *ngFor="let exp of experiences" class="border-l-4 border-indigo-500 pl-4 py-2 transition-colors hover:border-indigo-700">
+              <h3 class="font-semibold text-lg text-gray-800">{{ exp.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ exp.company }} | {{ exp.duration }}</p>
+              <ul class="text-gray-700 text-sm mt-2 space-y-1">
+                <li *ngFor="let desc of exp.description" class="before:content-['▪'] before:mr-2 before:text-indigo-500">
+                  {{ desc }}
+                </li>
+              </ul>
             </div>
-            <p class="ml-5 text-pink-500 font-bold">Achievements</p>
-            <div class="grid grid-cols-1 gap-4 text-white bg-peach rounded-full p-2 mb-2">
-                <ul class="list-disc px-4">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
+          </div>
         </div>
-
-        <!-- Left column -->
-        <div class="w-1/2 p-4 mb-4">
-            <p class="ml-8 text-pink-500 font-bold">Studies</p>
-            <div class="bg-pink-200 h-full text-white rounded-full p-2 mb-2">
-                <div>
-                    <ul class="">
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                    </ul>
-                </div>
+  
+        <!-- Achievements Section -->
+        <div class="bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-6 text-emerald-700 border-b-2 border-emerald-200 pb-3 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+            Achievements
+          </h2>
+          <div class="space-y-4">
+            <div *ngFor="let achievement of achievements" class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-500 hover:bg-emerald-100 transition-colors">
+              <h3 class="font-semibold text-gray-800">{{ achievement.title }}</h3>
+              <p class="text-gray-600 text-sm">{{ achievement.issuer }}</p>
+              <p class="text-xs text-gray-500 mt-1">{{ achievement.date }}</p>
             </div>
+          </div>
         </div>
+  
+        <!-- Education Section -->
+        <div class="bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl">
+          <h2 class="text-2xl font-bold mb-6 text-rose-700 border-b-2 border-rose-200 pb-3 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            </svg>
+            Education
+          </h2>
+          <div class="space-y-4">
+            <div *ngFor="let edu of education" class="bg-rose-50 p-4 rounded-lg border-l-4 border-rose-500 hover:bg-rose-100 transition-colors">
+              <h3 class="font-semibold text-gray-800">{{ edu.degree }}</h3>
+              <p class="text-gray-600 text-sm">{{ edu.institution }}</p>
+              <p class="text-xs text-gray-500 mt-1">{{ edu.graduationYear }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
