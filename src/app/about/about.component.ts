@@ -34,13 +34,13 @@ export class AboutComponent {
 
   experiences: Experience[] = [
     {
-      title: 'Computer Lab Assistant',
-      company: 'Tshwane University Of Technology',
-      duration: 'June 2021 - June 2022',
+      title: 'Full-Stack Developer',
+      company: 'Itthynk Smart Solutions',
+      duration: 'Jan 2022 - Present',
       description: [
-        'Support computer lab operations',
-'Support faculty and students to use computer software and hardware',
-'Respond to queries and introduce students to use of computers and peripheral equipment...etc',
+        'Developed scalable web applications',
+        'Led frontend architecture improvements',
+        'Implemented modern React and Angular solutions'
       ]
     },
     {
@@ -54,17 +54,15 @@ export class AboutComponent {
       ]
     },
     {
-      title: 'Full-Stack Developer',
-      company: 'Itthynk Smart Solutions',
-      duration: 'Jan 2022 - Present',
+      title: 'Computer Lab Assistant',
+      company: 'Tshwane University Of Technology',
+      duration: 'June 2021 - June 2022',
       description: [
-        'Developed scalable web applications',
-        'Led frontend architecture improvements',
-        'Implemented modern React and Angular solutions'
+        'Support computer lab operations',
+'Support faculty and students to use computer software and hardware',
+'Respond to queries and introduce students to use of computers and peripheral equipment...etc',
       ]
-    },
-
-    // Add more experiences as needed
+    }
   ];
 
   achievements: Achievement[] = [
