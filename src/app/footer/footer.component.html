@@ -1,17 +1,90 @@
-<!-- app.component.html -->
+<footer class="bg-dark-900 text-white py-12 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.1&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+  </div>
 
-<div class=" flex flex-col justify-between">
-    <footer class="bg-pink-500 text-white p-4 flex items-center justify-center">
-        <div class="">
-            <!-- Social Icons -->
-            <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank" class="text-white ml-10 hover:text-pink-700">
-                <i class="fab fa-linkedin fa-lg"></i>
-            </a>
-            <a href="https://github.com/MathibelaD" target="_blank" class="text-white mx-5 hover:text-pink-700">
-                <i class="fab fa-github fa-lg"></i>
-            </a>
-            <!-- <p>let's connect</p> -->
-            <div>&copy; {{ currentYear }}. Ms Mathibela</div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <!-- Brand Section -->
+      <div class="text-center md:text-left">
+        <h3 class="text-2xl font-bold gradient-text mb-4">Dineo Mathibela</h3>
+        <p class="text-white/70 leading-relaxed mb-4">
+          Full-Stack Developer passionate about creating innovative solutions and writing clean, efficient code.
+        </p>
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank" 
+             class="group w-10 h-10 bg-white/10 hover:bg-primary-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <i class="fab fa-linkedin text-white group-hover:text-white"></i>
+          </a>
+          <a href="https://github.com/MathibelaD" target="_blank" 
+             class="group w-10 h-10 bg-white/10 hover:bg-dark-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <i class="fab fa-github text-white group-hover:text-white"></i>
+          </a>
+          <a href="mailto:mathibeladineo1@gmail.com" 
+             class="group w-10 h-10 bg-white/10 hover:bg-accent-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <i class="fas fa-envelope text-white group-hover:text-white"></i>
+          </a>
         </div>
-    </footer>
-</div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="text-center">
+        <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-white/70 hover:text-accent-300 transition-colors duration-300">Home</a></li>
+          <li><a href="#about" class="text-white/70 hover:text-accent-300 transition-colors duration-300">About</a></li>
+          <li><a href="#projects" class="text-white/70 hover:text-accent-300 transition-colors duration-300">Projects</a></li>
+          <li><a href="#skills" class="text-white/70 hover:text-accent-300 transition-colors duration-300">Skills</a></li>
+          <li><a href="#contact" class="text-white/70 hover:text-accent-300 transition-colors duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="text-center md:text-right">
+        <h4 class="text-lg font-semibold text-white mb-4">Get In Touch</h4>
+        <div class="space-y-2 text-white/70">
+          <p class="flex items-center justify-center md:justify-end">
+            <i class="fas fa-envelope mr-2 text-accent-300"></i>
+            <a href="mailto:mathibeladineo1@gmail.com" class="hover:text-accent-300 transition-colors duration-300">
+              mathibeladineo1@gmail.com
+            </a>
+          </p>
+          <p class="flex items-center justify-center md:justify-end">
+            <i class="fas fa-map-marker-alt mr-2 text-accent-300"></i>
+            South Africa
+          </p>
+          <p class="flex items-center justify-center md:justify-end">
+            <i class="fas fa-clock mr-2 text-accent-300"></i>
+            Available for freelance
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-white/10 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="text-white/60 text-sm mb-4 md:mb-0">
+          &copy; {{ currentYear }} Dineo Mathibela. All rights reserved.
+        </div>
+        <div class="flex items-center space-x-6 text-sm text-white/60">
+          <span class="flex items-center">
+            <i class="fas fa-heart text-red-400 mr-1"></i>
+            Made with passion
+          </span>
+          <span class="flex items-center">
+            <i class="fab fa-angular text-red-500 mr-1"></i>
+            Built with Angular
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button (click)="scrollToTop()" 
+          class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-accent-500 to-primary-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50 group">
+    <i class="fas fa-chevron-up group-hover:animate-bounce"></i>
+  </button>
+</footer>
