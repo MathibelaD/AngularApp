@@ -9,7 +9,7 @@ import { PdfService } from '../pdf/pdf.service';
 })
 export class HeroComponent implements OnInit {
   constructor(private titleService: Title, private pdfService: PdfService) {
-    this.titleService.setTitle("Ms Mathibela - Home");
+    this.titleService.setTitle("Ms Mathibela");
   }
 
   roles = ['Full Stack Developer', 'Qualified cloud Practitioner', 'Qualified SysOps Administrator'];

@@ -54,7 +54,7 @@ export class SkillsComponent {
   ];
 
   constructor(private TitleService: Title) {
-    this.TitleService.setTitle("Ms Mathibela - Skills")
+    this.TitleService.setTitle("Ms Mathibela")
   }
 
   get categories(): string[] {

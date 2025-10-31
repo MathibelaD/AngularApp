@@ -5,6 +5,7 @@ interface Project {
   name: string;
   image: string;
   url: string;
+  liveUrl?: string;
   description: string;
   technologies?: string[];
   stars?: number;
@@ -18,18 +19,19 @@ interface Project {
 })
 export class ProjectsComponent {
   constructor(private TitleService: Title) {
-    this.TitleService.setTitle("Ms Mathibela - Projects")
+    this.TitleService.setTitle("Ms Mathibela")
   }
 
   projects: Project[] = [
     { 
-      name: "House Market Place", 
-      image: "assets/images/market_place.jpg", 
-      url: "https://github.com/MathibelaD/marketplace", 
-      description: "A modern real estate platform built with React and Firebase. Features include property listings, user authentication, image uploads, and real-time data synchronization.",
-      technologies: ['React', 'Firebase', 'CSS3', 'JavaScript'],
-      stars: 12,
-      forks: 3
+      name: "QR Scanner", 
+      image: "assets/images/qrscanner.png", 
+      url: "https://github.com/MathibelaD/qr-doc-share",
+      liveUrl: "https://qr-doc-share.vercel.app/",
+      description: "A modern QR code scanner and document sharing application. Features include QR code generation, document upload, secure sharing, and real-time scanning capabilities.",
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
+      stars: 8,
+      forks: 2
     },
     { 
       name: "Photo Gallery", 

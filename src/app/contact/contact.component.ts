@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
   constructor(private TitleService: Title) {
-    this.TitleService.setTitle("Ms Mathibela - contact")
+    this.TitleService.setTitle("Ms Mathibela")
   }
   formData: any = {
     name: '',
