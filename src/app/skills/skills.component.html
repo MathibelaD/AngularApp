@@ -1,79 +1,101 @@
-<section class="py-20 bg-gradient-to-br from-dark-900 via-primary-900 to-accent-900 text-white relative overflow-hidden">
-  <!-- Background Pattern -->
-  <div class="absolute inset-0 opacity-10">
-    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z&quot; fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.1&quot; fill-rule=&quot;evenodd&quot;/%3E%3C/svg%3E')"></div>
-  </div>
+<section class="py-24 relative overflow-hidden"
+         style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);">
 
-  <div class="container mx-auto px-4 relative z-10">
+  <!-- Background grid -->
+  <div class="absolute inset-0 opacity-[0.04]"
+       style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+  <!-- Glow blobs -->
+  <div class="absolute top-1/3 left-0 w-72 h-72 rounded-full blur-3xl opacity-10 pointer-events-none"
+       style="background: radial-gradient(circle, #6366f1, transparent 70%);"></div>
+  <div class="absolute bottom-1/3 right-0 w-72 h-72 rounded-full blur-3xl opacity-10 pointer-events-none"
+       style="background: radial-gradient(circle, #22d3ee, transparent 70%);"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fade-in">
-      <h2 class="text-5xl font-bold mb-4">
-        <span class="text-white">My</span> <span class="gradient-text">Skills</span>
+      <div class="flex justify-center mb-3">
+        <span class="section-label" style="background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.25);">
+          <i class="fas fa-layer-group"></i> Tech Stack
+        </span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Skills & <span class="gradient-text">Expertise</span>
       </h2>
-      <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-        Empowering projects with versatile skills across the full development stack
+      <p class="text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
+        A full-stack arsenal — from pixel-perfect UIs to scalable cloud infrastructure.
       </p>
-      <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-primary-400 mx-auto mt-6 rounded-full"></div>
+      <div class="section-divider"></div>
     </div>
 
-    <!-- Skills Categories -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-      <!-- Frontend Skills -->
+    <!-- Skills Grid: Frontend + Backend -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+
+      <!-- Frontend -->
       <div class="animate-slide-in-left">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-          <div class="flex items-center mb-8">
-            <div class="w-12 h-12 bg-gradient-to-r from-accent-400 to-primary-400 rounded-lg flex items-center justify-center mr-4">
-              <i class="fas fa-code text-white text-xl"></i>
+        <div class="rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+             style="background: rgba(255,255,255,0.04); backdrop-filter: blur(12px);">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white"
+                 style="background: linear-gradient(135deg, #6366f1, #22d3ee);">
+              <i class="fas fa-code text-sm"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white">Frontend Development</h3>
+            <div>
+              <h3 class="text-lg font-bold text-white">Frontend</h3>
+              <p class="text-xs text-white/40">UI & User Experience</p>
+            </div>
           </div>
-          
-          <div class="space-y-6">
-            <div *ngFor="let skill of getSkillsByCategory('frontend'); let i = index" 
-                 class="animate-slide-up" 
-                 [style.animation-delay]="(i * 0.1) + 's'">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-white font-medium flex items-center gap-2">
-                  <i [class]="skill.icon" class="text-accent-300"></i>
+          <div class="space-y-5">
+            <div *ngFor="let skill of getSkillsByCategory('frontend'); let i = index"
+                 class="animate-slide-up"
+                 [style.animation-delay]="(i * 0.08) + 's'">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-white/80 font-medium flex items-center gap-2">
+                  <i [class]="skill.icon" class="text-accent-400 w-4 text-center"></i>
                   {{ skill.name }}
                 </span>
-                <span class="text-accent-300 font-semibold">{{ skill.progress }}%</span>
+                <span class="text-xs text-white/40 font-mono">{{ skill.progress }}%</span>
               </div>
-              <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-accent-400 to-primary-400 rounded-full transition-all duration-1000 ease-out skill-bar" 
-                     [style.width.%]="skill.progress"
-                     [style.animation-delay]="(i * 0.2) + 's'"></div>
+              <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255,255,255,0.08);">
+                <div class="h-full rounded-full transition-all duration-1000 ease-out"
+                     style="background: linear-gradient(90deg, #6366f1, #22d3ee);"
+                     [style.width.%]="skill.progress"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Backend Skills -->
+      <!-- Backend & Cloud -->
       <div class="animate-slide-in-right">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
-          <div class="flex items-center mb-8">
-            <div class="w-12 h-12 bg-gradient-to-r from-primary-400 to-accent-400 rounded-lg flex items-center justify-center mr-4">
-              <i class="fas fa-server text-white text-xl"></i>
+        <div class="rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+             style="background: rgba(255,255,255,0.04); backdrop-filter: blur(12px);">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-white"
+                 style="background: linear-gradient(135deg, #22d3ee, #6366f1);">
+              <i class="fas fa-server text-sm"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white">Backend & Cloud</h3>
+            <div>
+              <h3 class="text-lg font-bold text-white">Backend & Cloud</h3>
+              <p class="text-xs text-white/40">APIs, Databases & Infrastructure</p>
+            </div>
           </div>
-          
-          <div class="space-y-6">
-            <div *ngFor="let skill of getSkillsByCategory('backend'); let i = index" 
-                 class="animate-slide-up" 
-                 [style.animation-delay]="(i * 0.1 + 0.3) + 's'">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-white font-medium flex items-center gap-2">
-                  <i [class]="skill.icon" class="text-primary-300"></i>
+          <div class="space-y-5">
+            <div *ngFor="let skill of getSkillsByCategory('backend'); let i = index"
+                 class="animate-slide-up"
+                 [style.animation-delay]="(i * 0.08 + 0.2) + 's'">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-white/80 font-medium flex items-center gap-2">
+                  <i [class]="skill.icon" class="text-primary-400 w-4 text-center"></i>
                   {{ skill.name }}
                 </span>
-                <span class="text-primary-300 font-semibold">{{ skill.progress }}%</span>
+                <span class="text-xs text-white/40 font-mono">{{ skill.progress }}%</span>
               </div>
-              <div class="w-full bg-white/20 rounded-full h-3 overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary-400 to-accent-400 rounded-full transition-all duration-1000 ease-out skill-bar" 
-                     [style.width.%]="skill.progress"
-                     [style.animation-delay]="(i * 0.2 + 0.6) + 's'"></div>
+              <div class="w-full h-1.5 rounded-full overflow-hidden" style="background: rgba(255,255,255,0.08);">
+                <div class="h-full rounded-full transition-all duration-1000 ease-out"
+                     style="background: linear-gradient(90deg, #22d3ee, #6366f1);"
+                     [style.width.%]="skill.progress"></div>
               </div>
             </div>
           </div>
@@ -82,43 +104,52 @@
     </div>
 
     <!-- Tools & Technologies -->
-    <div class="mt-16 animate-fade-in" style="animation-delay: 1.2s;">
-      <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-center text-white mb-8">Tools & Technologies</h3>
-        <div class="flex flex-wrap justify-center gap-4">
-          <div *ngFor="let tool of tools; let i = index" 
-               class="group bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 animate-fade-in"
-               [style.animation-delay]="(i * 0.1 + 1.5) + 's'">
-            <span class="text-white/80 group-hover:text-white font-medium flex items-center gap-2">
-              <i [class]="tool.icon" class="text-accent-300"></i>
-              {{ tool.name }}
-            </span>
+    <div class="max-w-6xl mx-auto mb-12 animate-fade-in">
+      <div class="rounded-2xl p-8 border border-white/10"
+           style="background: rgba(255,255,255,0.03); backdrop-filter: blur(8px);">
+        <h3 class="text-base font-semibold text-white/70 text-center mb-6 uppercase tracking-widest">
+          Tools & Technologies
+        </h3>
+        <div class="flex flex-wrap justify-center gap-3">
+          <div *ngFor="let tool of tools; let i = index"
+               class="flex items-center gap-2 px-4 py-2.5 rounded-full border border-white/10 hover:border-primary-500/40 hover:bg-primary-900/20 transition-all duration-300 hover:scale-105 cursor-default animate-fade-in"
+               [style.animation-delay]="(i * 0.06) + 's'">
+            <i [class]="tool.icon" class="text-accent-400 text-sm"></i>
+            <span class="text-white/70 text-sm font-medium">{{ tool.name }}</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Certifications Preview -->
-    <div class="mt-16 text-center animate-fade-in" style="animation-delay: 1.8s;">
-      <h3 class="text-2xl font-bold text-white mb-6">Certified Professional</h3>
-      <div class="flex flex-wrap justify-center gap-6">
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-          <i class="fab fa-aws text-3xl text-orange-400 mb-2"></i>
-          <p class="text-white font-medium">AWS Certified</p>
-          <p class="text-white/60 text-sm">Cloud Practitioner</p>
+    <!-- Certifications Highlight -->
+    <div class="max-w-6xl mx-auto animate-fade-in">
+      <h3 class="text-sm font-semibold text-white/40 text-center mb-6 uppercase tracking-widest">
+        Industry Certifications
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="flex items-center gap-4 p-5 rounded-2xl border border-white/10 hover:border-orange-400/30 hover:bg-orange-900/10 transition-all duration-300">
+          <i class="fab fa-aws text-3xl text-orange-400"></i>
+          <div>
+            <p class="text-white font-semibold text-sm">AWS Certified</p>
+            <p class="text-white/40 text-xs">SysOps Admin · Cloud Practitioner</p>
+          </div>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-          <i class="fab fa-microsoft text-3xl text-blue-400 mb-2"></i>
-          <p class="text-white font-medium">Microsoft Certified</p>
-          <p class="text-white/60 text-sm">Azure Developer</p>
+        <div class="flex items-center gap-4 p-5 rounded-2xl border border-white/10 hover:border-blue-400/30 hover:bg-blue-900/10 transition-all duration-300">
+          <i class="fab fa-microsoft text-3xl text-blue-400"></i>
+          <div>
+            <p class="text-white font-semibold text-sm">Microsoft Certified</p>
+            <p class="text-white/40 text-xs">Azure Fundamentals · Developer Associate</p>
+          </div>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-          <i class="fas fa-project-diagram text-3xl text-purple-400 mb-2"></i>
-          <p class="text-white font-medium">GraphQL Certified</p>
-          <p class="text-white/60 text-sm">Developer Associate</p>
+        <div class="flex items-center gap-4 p-5 rounded-2xl border border-white/10 hover:border-purple-400/30 hover:bg-purple-900/10 transition-all duration-300">
+          <i class="fas fa-project-diagram text-3xl text-purple-400"></i>
+          <div>
+            <p class="text-white font-semibold text-sm">GraphQL Certified</p>
+            <p class="text-white/40 text-xs">Apollo Graph Developer Associate</p>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 </section>
-  

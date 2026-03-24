@@ -8,8 +8,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
   constructor(private TitleService: Title) {
-    this.TitleService.setTitle("Ms Mathibela")
+    this.TitleService.setTitle("Ms Mathibela");
   }
+
+  messageSent = false;
+
   formData: any = {
     name: '',
     email: '',
@@ -19,8 +22,15 @@ export class ContactComponent {
 
   sendEmail(): void {
     const emailSubject = encodeURIComponent(this.formData.subject);
-    const emailBody = encodeURIComponent(`Name: ${this.formData.name}%0D%0AEmail: ${this.formData.email}%0D%0ASubject: ${this.formData.subject}%0D%0AMessage: ${this.formData.message}`);
-
+    const emailBody = encodeURIComponent(
+      `Name: ${this.formData.name}\r\nEmail: ${this.formData.email}\r\nSubject: ${this.formData.subject}\r\nMessage: ${this.formData.message}`
+    );
     window.location.href = `mailto:mathibeladineo1@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    this.messageSent = true;
+    this.formData = { name: '', email: '', subject: '', message: '' };
+  }
+
+  resetForm(): void {
+    this.messageSent = false;
   }
 }

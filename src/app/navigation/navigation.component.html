@@ -1,77 +1,62 @@
-<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-900/90 backdrop-blur-md" [ngClass]="{'glass bg-white/95': isScrolled}">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <!-- Logo/Brand -->
-      <div class="flex-shrink-0">
-        <a href="#" class="text-2xl font-bold" [ngClass]="{'text-white': !isScrolled, 'gradient-text': isScrolled}">
-          DM
+<nav [ngClass]="isScrolled ? 'nav-scrolled' : 'nav-top'">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">D</div>
+      <span class="nav-logo-text" [ngClass]="isScrolled ? 'text-dark-800' : 'text-white'">
+        Dineo<span class="gradient-text">.</span>
+      </span>
+    </a>
+
+    <!-- Desktop links (lg and up) -->
+    <ul class="nav-links">
+      <li *ngFor="let item of navItems">
+        <a [href]="item.href"
+           class="nav-link"
+           [ngClass]="{
+             'nav-link-light': !isScrolled,
+             'nav-link-dark': isScrolled,
+             'nav-link-active': activeItem === item.id
+           }"
+           (click)="setActiveItem(item.id)">
+          {{ item.label }}
         </a>
-      </div>
+      </li>
+    </ul>
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <ul class="flex space-x-1">
-          <li *ngFor="let item of navItems">
-            <a [href]="item.href" 
-               class="relative px-4 py-2 rounded-full font-medium transition-all duration-300 group"
-               [ngClass]="{
-                 'text-white/90 hover:text-white': !isScrolled,
-                 'text-dark-700 hover:text-primary-600': isScrolled
-               }"
-               (click)="setActiveItem(item.id)">
-              <span class="relative z-10">{{ item.label }}</span>
-              <div class="absolute inset-0 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100"
-                   [ngClass]="{
-                     'bg-white/20': !isScrolled,
-                     'bg-primary-100': isScrolled
-                   }"></div>
-              <div *ngIf="activeItem === item.id" 
-                   class="absolute inset-0 rounded-full transition-all duration-300"
-                   [ngClass]="{
-                     'bg-white/30': !isScrolled,
-                     'bg-primary-200': isScrolled
-                   }"></div>
-            </a>
-          </li>
-        </ul>
-      </div>
+    <!-- Desktop CTA -->
+    <a href="#contact" class="nav-cta" [ngClass]="isScrolled ? 'nav-cta-dark' : 'nav-cta-light'"
+       (click)="setActiveItem('contact')">
+      <i class="fas fa-paper-plane"></i> Hire Me
+    </a>
 
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button (click)="toggleMobileMenu()" 
-                class="p-2 rounded-md transition-colors duration-300"
-                [ngClass]="{
-                  'text-white hover:text-accent-300': !isScrolled,
-                  'text-dark-700 hover:text-primary-600': isScrolled
-                }">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
+    <!-- Mobile hamburger -->
+    <button class="nav-hamburger" (click)="toggleMobileMenu()"
+            [ngClass]="isScrolled ? 'text-dark-700' : 'text-white'">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+        <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
   </div>
 
-  <!-- Mobile menu -->
-  <div class="md:hidden transition-all duration-300 overflow-hidden backdrop-blur-md" 
-       [ngClass]="{
-         'max-h-0': !isMobileMenuOpen,
-         'max-h-96': isMobileMenuOpen,
-         'bg-white/95': isScrolled,
-         'bg-dark-900/95': !isScrolled
-       }">
-    <div class="px-4 py-4 space-y-2">
-      <a *ngFor="let item of navItems" 
-         [href]="item.href"
-         class="block px-4 py-3 rounded-lg font-medium transition-all duration-300"
-         [ngClass]="{
-           'text-white hover:bg-white/20': !isScrolled,
-           'text-dark-700 hover:bg-primary-100': isScrolled
-         }"
-         (click)="setActiveItem(item.id); toggleMobileMenu()">
-        {{ item.label }}
-      </a>
-    </div>
+  <!-- Mobile dropdown -->
+  <div class="nav-mobile-menu" [ngClass]="{'nav-mobile-open': isMobileMenuOpen}"
+       [style.background]="isScrolled ? 'rgba(255,255,255,0.98)' : 'rgba(15,23,42,0.98)'">
+    <a *ngFor="let item of navItems"
+       [href]="item.href"
+       class="nav-mobile-link"
+       [ngClass]="isScrolled ? 'text-dark-700' : 'text-white'"
+       (click)="setActiveItem(item.id); toggleMobileMenu()">
+      {{ item.label }}
+    </a>
+    <a href="#contact" class="nav-mobile-cta"
+       (click)="setActiveItem('contact'); toggleMobileMenu()">
+      <i class="fas fa-paper-plane"></i> Hire Me
+    </a>
   </div>
 </nav>

@@ -1,84 +1,159 @@
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden -mt-16">
-  <!-- Animated Background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary-900 via-accent-800 to-primary-800">
-    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.05&quot;%3E%3Ccircle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;2&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.2;"></div>
-  </div>
-  
-  <!-- Floating Elements -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden -mt-16"
+         style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 45%, #0f172a 100%);">
+
+  <!-- Subtle grid background -->
+  <div class="absolute inset-0 opacity-[0.04]"
+       style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+  <!-- Radial glow blobs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none"
+       style="background: radial-gradient(circle, #6366f1, transparent 70%);"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl opacity-15 pointer-events-none"
+       style="background: radial-gradient(circle, #22d3ee, transparent 70%);"></div>
+
+  <!-- Floating balls -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-20 h-20 bg-accent-400 rounded-full opacity-20 animate-float"></div>
-    <div class="absolute top-40 right-20 w-16 h-16 bg-primary-400 rounded-full opacity-30 animate-float" style="animation-delay: -2s;"></div>
-    <div class="absolute bottom-20 left-20 w-24 h-24 bg-accent-300 rounded-full opacity-15 animate-float" style="animation-delay: -4s;"></div>
-    <div class="absolute bottom-40 right-10 w-12 h-12 bg-primary-300 rounded-full opacity-25 animate-float" style="animation-delay: -1s;"></div>
+    <div class="absolute w-5 h-5 rounded-full animate-float" style="top:15%; left:8%; background: linear-gradient(135deg,#6366f1,#818cf8); opacity:0.6; animation-delay:0s;"></div>
+    <div class="absolute w-3 h-3 rounded-full animate-float" style="top:35%; left:5%; background: #818cf8; opacity:0.5; animation-delay:-1.5s;"></div>
+    <div class="absolute w-4 h-4 rounded-full animate-float" style="top:65%; left:12%; background: linear-gradient(135deg,#6366f1,#22d3ee); opacity:0.55; animation-delay:-3s;"></div>
+    <div class="absolute w-2.5 h-2.5 rounded-full animate-float" style="top:80%; left:25%; background: #6366f1; opacity:0.45; animation-delay:-0.8s;"></div>
+    <div class="absolute w-6 h-6 rounded-full animate-float" style="top:20%; right:10%; background: linear-gradient(135deg,#6366f1,#a5b4fc); opacity:0.5; animation-delay:-2s;"></div>
+    <div class="absolute w-3 h-3 rounded-full animate-float" style="top:50%; right:6%; background: #a5b4fc; opacity:0.5; animation-delay:-4s;"></div>
+    <div class="absolute w-4 h-4 rounded-full animate-float" style="top:75%; right:15%; background: linear-gradient(135deg,#6366f1,#22d3ee); opacity:0.45; animation-delay:-1s;"></div>
+    <div class="absolute w-2 h-2 rounded-full animate-float" style="top:10%; right:30%; background: #6366f1; opacity:0.6; animation-delay:-2.5s;"></div>
+    <div class="absolute w-3 h-3 rounded-full animate-float" style="top:45%; left:18%; background: #22d3ee; opacity:0.4; animation-delay:-3.5s;"></div>
+    <div class="absolute w-2.5 h-2.5 rounded-full animate-float" style="top:88%; right:25%; background: #67e8f9; opacity:0.35; animation-delay:-0.5s;"></div>
   </div>
 
-  <div class="container mx-auto px-4 z-10 relative">
-    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-      <!-- Profile Image -->
-      <div class="lg:w-1/2 flex justify-center animate-slide-in-left">
-        <div class="relative group">
-          <div class="absolute -inset-4 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-slow"></div>
-          <div class="relative">
-            <img src="assets/images/me.jpeg" alt="Dineo Mathibela" 
-                 class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl border-4 border-white/20 group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 rounded-full bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-        </div>
-      </div>
+  <div class="container mx-auto px-6 z-10 relative pt-16">
+    <div class="flex flex-col lg:flex-row-reverse items-center justify-between gap-8 lg:gap-12">
 
-      <!-- Content -->
+      <!-- Text content — appears on RIGHT on desktop -->
       <div class="lg:w-1/2 text-center lg:text-left animate-slide-in-right">
-        <div class="mb-6">
-          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-            <span class="block animate-fade-in">Dineo</span>
-            <span class="block gradient-text animate-fade-in" style="animation-delay: 0.2s;">Mathibela</span>
-          </h1>
-          <div class="text-lg md:text-xl lg:text-2xl text-white/90 font-medium mb-2 animate-fade-in" style="animation-delay: 0.4s;">
-            <span>Full Stack Developer | SysOps Administrator</span>
-          </div>
+
+        <!-- Availability badge -->
+        <div class="flex justify-center lg:justify-start mb-6">
+          <span class="badge-available">Available for opportunities</span>
         </div>
 
-        <!-- Social Links -->
-        <div class="flex justify-center lg:justify-start gap-6 mb-8 animate-fade-in" style="animation-delay: 0.8s;">
-          <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank" rel="noopener noreferrer"
-             class="group relative p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
-            <i class="fab fa-linkedin text-2xl text-white group-hover:text-accent-300 transition-colors duration-300"></i>
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </a>
-          <a href="https://github.com/MathibelaD" target="_blank" rel="noopener noreferrer"
-             class="group relative p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110">
-            <i class="fab fa-github text-2xl text-white group-hover:text-accent-300 transition-colors duration-300"></i>
-            <div class="absolute inset-0 rounded-full bg-gradient-to-r from-accent-400 to-primary-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-          </a>
+        <!-- Name & title -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-[1.1] tracking-tight animate-fade-in">
+          Dineo<br>
+          <span class="gradient-text">Mathibela</span>
+        </h1>
+
+        <div class="text-base md:text-lg text-white/60 font-mono mb-2 animate-fade-in" style="animation-delay: 0.2s;">
+          &lt; Full Stack Developer / SysOps Administrator /&gt;
         </div>
 
         <!-- Description -->
-        <p class="text-lg text-white/80 leading-relaxed mb-8 max-w-2xl animate-fade-in" style="animation-delay: 1s;">
-          With 3+ years of experience and 15+ certifications, I transform ideas into powerful digital solutions. 
-          Specializing in full-stack development with expertise in React, Angular, Node.js, and cloud technologies. 
-          I deliver scalable, user-focused applications that drive business growth.
+        <p class="text-base md:text-lg text-white/70 leading-relaxed mb-8 max-w-lg animate-fade-in" style="animation-delay: 0.4s;">
+          3+ years building scalable web applications and cloud infrastructure.
+          Specializing in React, Angular, Node.js, and AWS with 15+ industry certifications.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style="animation-delay: 1.2s;">
-          <button class="btn-primary group relative overflow-hidden" (click)="downloadPdf()">
-            <span class="relative z-10 flex items-center justify-center gap-2">
-              <i class="fas fa-download"></i>
-              Download CV
-            </span>
+        <!-- Stats row -->
+        <div class="flex justify-center lg:justify-start gap-4 mb-10 animate-fade-in" style="animation-delay: 0.6s;">
+          <div class="stat-card">
+            <span class="text-2xl font-bold gradient-text">3+</span>
+            <span class="text-xs text-white/50 mt-1 whitespace-nowrap">Years Exp.</span>
+          </div>
+          <div class="stat-card">
+            <span class="text-2xl font-bold gradient-text">15+</span>
+            <span class="text-xs text-white/50 mt-1">Certifications</span>
+          </div>
+          <div class="stat-card">
+            <span class="text-2xl font-bold gradient-text">10+</span>
+            <span class="text-xs text-white/50 mt-1">Projects</span>
+          </div>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8 animate-fade-in" style="animation-delay: 0.8s;">
+          <button class="btn-primary flex items-center justify-center gap-2" (click)="downloadPdf()">
+            <i class="fas fa-download text-sm"></i>
+            Download CV
           </button>
-          <a href="#projects" class="px-8 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 text-center">
+          <a href="#projects" class="btn-secondary flex items-center justify-center gap-2">
             View My Work
+            <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Social links -->
+        <div class="flex justify-center lg:justify-start gap-4 animate-fade-in" style="animation-delay: 1s;">
+          <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-2 text-sm text-white/50 hover:text-white/90 transition-colors duration-300">
+            <i class="fab fa-linkedin text-lg"></i>
+            <span>LinkedIn</span>
+          </a>
+          <span class="text-white/20">·</span>
+          <a href="https://github.com/MathibelaD" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-2 text-sm text-white/50 hover:text-white/90 transition-colors duration-300">
+            <i class="fab fa-github text-lg"></i>
+            <span>GitHub</span>
+          </a>
+          <span class="text-white/20">·</span>
+          <a href="mailto:mathibeladineo1@gmail.com"
+             class="flex items-center gap-2 text-sm text-white/50 hover:text-white/90 transition-colors duration-300">
+            <i class="fas fa-envelope text-lg"></i>
+            <span>Email</span>
           </a>
         </div>
       </div>
+
+      <!-- Image — appears on LEFT on desktop -->
+      <div class="lg:w-1/2 flex justify-center animate-slide-in-left">
+        <div class="relative group">
+          <!-- Glow ring -->
+          <div class="absolute -inset-1 rounded-full opacity-60 blur-md transition-opacity duration-500 group-hover:opacity-90"
+               style="background: linear-gradient(135deg, #6366f1, #22d3ee);"></div>
+          <!-- Image -->
+          <div class="relative rounded-full p-1"
+               style="background: linear-gradient(135deg, #6366f1, #22d3ee);">
+            <img src="assets/images/me.jpeg" alt="Dineo Mathibela"
+                 class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                 style="border: 4px solid #0f172a;">
+          </div>
+
+          <!-- Floating tech badges — Frontend (right side) -->
+          <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: 0s;">
+            <i class="fab fa-react text-blue-500 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">React</span>
+          </div>
+          <div class="absolute top-1/2 -right-8 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: -1.5s;">
+            <i class="fab fa-angular text-red-500 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">Angular</span>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: -4s;">
+            <i class="fab fa-aws text-orange-500 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">AWS</span>
+          </div>
+
+          <!-- Floating tech badges — Backend (left side) -->
+          <div class="absolute -top-4 -left-4 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: -2s;">
+            <i class="fab fa-node-js text-green-600 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">Node.js</span>
+          </div>
+          <div class="absolute top-1/2 -left-10 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: -3.5s;">
+            <i class="fas fa-project-diagram text-purple-500 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">GraphQL</span>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-3 py-2 flex items-center gap-2 animate-float" style="animation-delay: -0.8s;">
+            <i class="fas fa-database text-green-700 text-lg"></i>
+            <span class="text-dark-800 text-xs font-semibold">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Scroll Indicator -->
-  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-    <a href="#about" class="text-white/60 hover:text-white transition-colors duration-300">
-      <i class="fas fa-chevron-down text-2xl"></i>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
+    <a href="#about" class="flex flex-col items-center gap-1 text-white/40 hover:text-white/70 transition-colors duration-300">
+      <span class="text-xs tracking-widest uppercase">Scroll</span>
+      <i class="fas fa-chevron-down text-sm"></i>
     </a>
   </div>
 </section>

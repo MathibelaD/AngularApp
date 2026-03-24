@@ -1,3 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Wrapper sections in app.component.html must have no padding —
+   each inner component section handles its own spacing */
+main > section {
+  padding: 0;
+}

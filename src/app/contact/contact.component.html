@@ -1,151 +1,169 @@
-<section class="py-20 bg-gradient-to-br from-dark-900 via-primary-900 to-accent-900 text-white relative overflow-hidden">
-  <!-- Background Elements -->
-  <div class="absolute inset-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-20 left-10 w-32 h-32 bg-accent-400 rounded-full opacity-10 animate-float"></div>
-    <div class="absolute bottom-20 right-10 w-40 h-40 bg-primary-400 rounded-full opacity-10 animate-float" style="animation-delay: -3s;"></div>
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-accent-400/5 to-transparent rounded-full"></div>
-  </div>
+<section class="py-24 bg-white relative overflow-hidden">
 
-  <div class="container mx-auto px-4 relative z-10">
+  <!-- Subtle background -->
+  <div class="absolute inset-0 opacity-[0.015]"
+       style="background-image: linear-gradient(rgba(0,0,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+
     <!-- Section Header -->
     <div class="text-center mb-16 animate-fade-in">
-      <h2 class="text-5xl font-bold mb-4">
-        <span class="text-white">Get In</span> <span class="gradient-text">Touch</span>
+      <div class="flex justify-center mb-3">
+        <span class="section-label"><i class="fas fa-envelope"></i> Contact</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-dark-900 mb-4">
+        Let's Work <span class="gradient-text">Together</span>
       </h2>
-      <p class="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-        Ready to bring your ideas to life? Let's collaborate and create something amazing together.
+      <p class="text-lg text-dark-500 max-w-2xl mx-auto leading-relaxed">
+        Have a project in mind or want to discuss an opportunity? I'd love to hear from you.
       </p>
-      <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-primary-400 mx-auto mt-6 rounded-full"></div>
+      <div class="section-divider"></div>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-      <!-- Contact Info -->
-      <div class="animate-slide-in-left">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full">
-          <h3 class="text-2xl md:text-3xl font-bold text-white mb-8">Let's Connect</h3>
-          
-          <!-- Contact Methods -->
-          <div class="space-y-6 mb-8">
-            <div class="flex items-center group">
-              <div class="w-12 h-12 bg-gradient-to-r from-accent-400 to-primary-400 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                <i class="fas fa-envelope text-white text-lg"></i>
-              </div>
-              <div>
-                <h4 class="text-white font-semibold">Email</h4>
-                <a href="mailto:mathibeladineo1@gmail.com" class="text-white/70 hover:text-accent-300 transition-colors duration-300">
-                  mathibeladineo1@gmail.com
-                </a>
-              </div>
-            </div>
-            
-            <div class="flex items-center group">
-              <div class="w-12 h-12 bg-gradient-to-r from-primary-400 to-accent-400 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                <i class="fab fa-linkedin text-white text-lg"></i>
-              </div>
-              <div>
-                <h4 class="text-white font-semibold">LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank" class="text-white/70 hover:text-accent-300 transition-colors duration-300">
-                  Connect with me
-                </a>
-              </div>
-            </div>
-            
-            <div class="flex items-center group">
-              <div class="w-12 h-12 bg-gradient-to-r from-accent-400 to-primary-400 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                <i class="fab fa-github text-white text-lg"></i>
-              </div>
-              <div>
-                <h4 class="text-white font-semibold">GitHub</h4>
-                <a href="https://github.com/MathibelaD" target="_blank" class="text-white/70 hover:text-accent-300 transition-colors duration-300">
-                  View my projects
-                </a>
-              </div>
-            </div>
-          </div>
+    <div class="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
 
-          <!-- Quick Response Promise -->
-          <div class="bg-white/5 rounded-xl p-6 border border-white/10">
-            <div class="flex items-center mb-3">
-              <i class="fas fa-clock text-accent-300 mr-3"></i>
-              <h4 class="text-white font-semibold">Quick Response</h4>
+      <!-- Left: Info panel -->
+      <div class="lg:col-span-2 animate-slide-in-left">
+
+        <!-- Availability note -->
+        <div class="flex items-center gap-3 p-4 rounded-2xl border border-green-100 bg-green-50 mb-8">
+          <div class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0" style="box-shadow: 0 0 0 4px rgba(16,185,129,0.2);"></div>
+          <div>
+            <p class="text-sm font-semibold text-green-800">Currently Available</p>
+            <p class="text-xs text-green-600">Open to full-time & freelance roles</p>
+          </div>
+        </div>
+
+        <!-- Contact methods -->
+        <div class="space-y-4 mb-8">
+          <a href="mailto:mathibeladineo1@gmail.com"
+             class="flex items-center gap-4 p-4 rounded-xl border border-dark-100 hover:border-primary-200 hover:shadow-md transition-all duration-300 group">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0 text-sm"
+                 style="background: linear-gradient(135deg, #6366f1, #22d3ee);">
+              <i class="fas fa-envelope"></i>
             </div>
-            <p class="text-white/70 text-sm leading-relaxed">
-              I typically respond to messages within 24 hours. Looking forward to discussing your project!
-            </p>
+            <div>
+              <p class="text-xs text-dark-400 font-medium">Email</p>
+              <p class="text-sm font-semibold text-dark-700 group-hover:text-primary-600 transition-colors duration-300">
+                mathibeladineo1&#64;gmail.com
+              </p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/dineo-mathibela-53aa191a5/" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl border border-dark-100 hover:border-primary-200 hover:shadow-md transition-all duration-300 group">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0 text-sm"
+                 style="background: linear-gradient(135deg, #6366f1, #22d3ee);">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div>
+              <p class="text-xs text-dark-400 font-medium">LinkedIn</p>
+              <p class="text-sm font-semibold text-dark-700 group-hover:text-primary-600 transition-colors duration-300">
+                Dineo Mathibela
+              </p>
+            </div>
+          </a>
+
+          <a href="https://github.com/MathibelaD" target="_blank"
+             class="flex items-center gap-4 p-4 rounded-xl border border-dark-100 hover:border-primary-200 hover:shadow-md transition-all duration-300 group">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white flex-shrink-0 text-sm"
+                 style="background: linear-gradient(135deg, #6366f1, #22d3ee);">
+              <i class="fab fa-github"></i>
+            </div>
+            <div>
+              <p class="text-xs text-dark-400 font-medium">GitHub</p>
+              <p class="text-sm font-semibold text-dark-700 group-hover:text-primary-600 transition-colors duration-300">
+                &#64;MathibelaD
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Services -->
+        <div class="p-5 rounded-xl bg-dark-50 border border-dark-100">
+          <p class="text-xs font-semibold text-dark-400 uppercase tracking-widest mb-3">I can help with</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm text-dark-600">
+              <i class="fas fa-check text-primary-500 text-xs"></i> Full-Stack Web Development
+            </div>
+            <div class="flex items-center gap-2 text-sm text-dark-600">
+              <i class="fas fa-check text-primary-500 text-xs"></i> Cloud Solutions (AWS / Azure)
+            </div>
+            <div class="flex items-center gap-2 text-sm text-dark-600">
+              <i class="fas fa-check text-primary-500 text-xs"></i> API Design & Integration
+            </div>
+            <div class="flex items-center gap-2 text-sm text-dark-600">
+              <i class="fas fa-check text-primary-500 text-xs"></i> Database Architecture
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="animate-slide-in-right">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-          <h3 class="text-xl md:text-2xl font-bold text-white mb-6">Send a Message</h3>
-          
-          <form (ngSubmit)="sendEmail()" class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="form-group">
-                <label for="name" class="block text-white/80 font-medium mb-2">Name *</label>
+      <!-- Right: Form or Success state -->
+      <div class="lg:col-span-3 animate-slide-in-right">
+
+        <!-- Success state -->
+        <div *ngIf="messageSent"
+             class="h-full flex flex-col items-center justify-center text-center p-12 rounded-2xl border border-green-100 bg-green-50 animate-fade-in">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+            <i class="fas fa-check text-2xl text-green-500"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-dark-900 mb-2">Message Sent!</h3>
+          <p class="text-dark-500 mb-8 leading-relaxed">
+            Your email client should have opened. I'll get back to you within 24 hours.
+          </p>
+          <button (click)="resetForm()"
+                  class="btn-primary flex items-center gap-2">
+            <i class="fas fa-pen text-sm"></i> Send Another Message
+          </button>
+        </div>
+
+        <!-- Contact form -->
+        <div *ngIf="!messageSent"
+             class="p-8 rounded-2xl border border-dark-100 shadow-sm">
+          <h3 class="text-xl font-bold text-dark-900 mb-6">Send a Message</h3>
+
+          <form (ngSubmit)="sendEmail()" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-dark-700 mb-1.5">Full Name *</label>
                 <input type="text" id="name" name="name" [(ngModel)]="formData.name" required
-                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 focus:outline-none transition-all duration-300"
-                       placeholder="Your full name">
+                       class="w-full px-4 py-3 text-sm bg-dark-50 border border-dark-200 rounded-xl text-dark-800 placeholder-dark-400 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 focus:bg-white focus:outline-none transition-all duration-300"
+                       placeholder="Dineo Mathibela">
               </div>
-              
-              <div class="form-group">
-                <label for="email" class="block text-white/80 font-medium mb-2">Email *</label>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-dark-700 mb-1.5">Email Address *</label>
                 <input type="email" id="email" name="email" [(ngModel)]="formData.email" required
-                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 focus:outline-none transition-all duration-300"
-                       placeholder="your.email@example.com">
+                       class="w-full px-4 py-3 text-sm bg-dark-50 border border-dark-200 rounded-xl text-dark-800 placeholder-dark-400 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 focus:bg-white focus:outline-none transition-all duration-300"
+                       placeholder="you@example.com">
               </div>
             </div>
-            
-            <div class="form-group">
-              <label for="subject" class="block text-white/80 font-medium mb-2">Subject *</label>
-              <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required
-                     class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 focus:outline-none transition-all duration-300"
-                     placeholder="What's this about?">
-            </div>
-            
-            <div class="form-group">
-              <label for="message" class="block text-white/80 font-medium mb-2">Message *</label>
-              <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="5"
-                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 focus:outline-none transition-all duration-300 resize-none"
-                        placeholder="Tell me about your project or idea..."></textarea>
-            </div>
-            
-            <button type="submit" 
-                    class="w-full btn-primary py-4 text-lg font-semibold group relative overflow-hidden">
-              <span class="relative z-10 flex items-center justify-center gap-3">
-                <i class="fas fa-paper-plane"></i>
-                Send Message
-                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
-              </span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
 
-    <!-- Call to Action -->
-    <div class="text-center mt-16 animate-fade-in" style="animation-delay: 1s;">
-      <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto border border-white/10">
-        <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-        <p class="text-white/70 mb-6 leading-relaxed">
-          Whether you need a full-stack web application, cloud infrastructure setup, or technical consultation, 
-          I'm here to help bring your vision to life with modern, scalable solutions.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <span class="px-4 py-2 bg-white/10 rounded-full text-white/80 text-sm">
-            <i class="fas fa-code mr-2 text-accent-300"></i>Full-Stack Development
-          </span>
-          <span class="px-4 py-2 bg-white/10 rounded-full text-white/80 text-sm">
-            <i class="fas fa-cloud mr-2 text-primary-300"></i>Cloud Solutions
-          </span>
-          <span class="px-4 py-2 bg-white/10 rounded-full text-white/80 text-sm">
-            <i class="fas fa-mobile-alt mr-2 text-accent-300"></i>Responsive Design
-          </span>
-          <span class="px-4 py-2 bg-white/10 rounded-full text-white/80 text-sm">
-            <i class="fas fa-database mr-2 text-primary-300"></i>Database Design
-          </span>
+            <div>
+              <label for="subject" class="block text-sm font-semibold text-dark-700 mb-1.5">Subject *</label>
+              <input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" required
+                     class="w-full px-4 py-3 text-sm bg-dark-50 border border-dark-200 rounded-xl text-dark-800 placeholder-dark-400 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 focus:bg-white focus:outline-none transition-all duration-300"
+                     placeholder="Project inquiry / Job opportunity / Collaboration">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold text-dark-700 mb-1.5">Message *</label>
+              <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="5"
+                        class="w-full px-4 py-3 text-sm bg-dark-50 border border-dark-200 rounded-xl text-dark-800 placeholder-dark-400 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 focus:bg-white focus:outline-none transition-all duration-300 resize-none"
+                        placeholder="Tell me about your project, timeline, and budget..."></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full btn-primary py-3.5 flex items-center justify-center gap-2 text-base">
+              <i class="fas fa-paper-plane text-sm"></i>
+              Send Message
+            </button>
+
+            <p class="text-xs text-center text-dark-400">
+              <i class="fas fa-lock mr-1"></i>
+              Your information is private and will never be shared.
+            </p>
+          </form>
         </div>
       </div>
     </div>

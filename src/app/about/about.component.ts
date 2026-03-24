@@ -13,6 +13,14 @@ interface Achievement {
   date: string;
 }
 
+interface AchievementGroup {
+  issuer: string;
+  icon: string;
+  iconColor: string;
+  badgeStyle: string;
+  items: Achievement[];
+}
+
 interface Education {
   degree: string;
   institution: string;
@@ -25,6 +33,23 @@ interface Education {
 })
 export class AboutComponent {
   activeTab = 'experience';
+  expandedGroups = new Set<string>();
+
+  toggleGroup(issuer: string): void {
+    if (this.expandedGroups.has(issuer)) {
+      this.expandedGroups.delete(issuer);
+    } else {
+      this.expandedGroups.add(issuer);
+    }
+  }
+
+  isGroupExpanded(issuer: string): boolean {
+    return this.expandedGroups.has(issuer);
+  }
+
+  getVisibleCerts(group: AchievementGroup): Achievement[] {
+    return this.isGroupExpanded(group.issuer) ? group.items : group.items.slice(0, 2);
+  }
 
   tabs = [
     { id: 'experience', label: 'Experience', icon: 'fas fa-briefcase' },
@@ -36,11 +61,11 @@ export class AboutComponent {
     {
       title: 'Full-Stack Developer',
       company: 'Itthynk Smart Solutions',
-      duration: 'Jan 2022 - Present',
+      duration: 'August 2023 - Present',
       description: [
-        'Developed scalable web applications',
-        'Led frontend architecture improvements',
-        'Implemented modern React and Angular solutions'
+        'Architect and deliver full-stack web applications using React, Angular, and Node.js',
+        'Lead frontend development and enforce best practices across the team',
+        'Design and maintain REST and GraphQL APIs integrated with cloud services on AWS and Azure'
       ]
     },
     {
@@ -48,9 +73,9 @@ export class AboutComponent {
       company: 'Itthynk Smart Solutions',
       duration: 'July 2022 - July 2023',
       description: [
-        'Developed scalable web applications',
-        'Led frontend architecture improvements',
-        'Implemented modern React and Angular solutions'
+        'Built and maintained web application features under senior developer mentorship',
+        'Contributed to UI component libraries and responsive design improvements',
+        'Participated in agile sprints, code reviews, and deployment pipelines'
       ]
     },
     {
@@ -150,6 +175,54 @@ export class AboutComponent {
       date: 'Apr 2020'
     }
   ];
+
+  private issuerMeta: Record<string, { icon: string; iconColor: string; badgeStyle: string }> = {
+    'Amazon Web Services (AWS)': {
+      icon: 'fab fa-aws',
+      iconColor: '#f97316',
+      badgeStyle: 'background:#fff7ed; border-color:#fed7aa; color:#c2410c;'
+    },
+    'Microsoft': {
+      icon: 'fab fa-microsoft',
+      iconColor: '#3b82f6',
+      badgeStyle: 'background:#eff6ff; border-color:#bfdbfe; color:#1d4ed8;'
+    },
+    'Apollo GraphQL': {
+      icon: 'fas fa-project-diagram',
+      iconColor: '#7c3aed',
+      badgeStyle: 'background:#f5f3ff; border-color:#ddd6fe; color:#6d28d9;'
+    },
+    'LinkedIn': {
+      icon: 'fab fa-linkedin',
+      iconColor: '#0a66c2',
+      badgeStyle: 'background:#eff6ff; border-color:#bfdbfe; color:#1e40af;'
+    },
+    'Sololearn': {
+      icon: 'fas fa-graduation-cap',
+      iconColor: '#6366f1',
+      badgeStyle: 'background:#eef2ff; border-color:#c7d2fe; color:#4338ca;'
+    },
+    'Online Learning Platform': {
+      icon: 'fas fa-globe',
+      iconColor: '#10b981',
+      badgeStyle: 'background:#ecfdf5; border-color:#a7f3d0; color:#065f46;'
+    }
+  };
+
+  get groupedAchievements(): AchievementGroup[] {
+    const map = new Map<string, Achievement[]>();
+    for (const a of this.achievements) {
+      if (!map.has(a.issuer)) map.set(a.issuer, []);
+      map.get(a.issuer)!.push(a);
+    }
+    return Array.from(map.entries()).map(([issuer, items]) => ({
+      issuer,
+      items,
+      icon: this.issuerMeta[issuer]?.icon ?? 'fas fa-certificate',
+      iconColor: this.issuerMeta[issuer]?.iconColor ?? '#d946ef',
+      badgeStyle: this.issuerMeta[issuer]?.badgeStyle ?? 'background:#fdf4ff; border-color:#f5d0fe; color:#a21caf;'
+    }));
+  }
 
   education: Education[] = [
     {
