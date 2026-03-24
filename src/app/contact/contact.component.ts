@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import emailjs from '@emailjs/browser';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -8,29 +10,48 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent {
   constructor(private TitleService: Title) {
-    this.TitleService.setTitle("Ms Mathibela");
+    this.TitleService.setTitle('Ms Mathibela');
+    emailjs.init(environment.emailjs.publicKey);
   }
 
   messageSent = false;
+  isSubmitting = false;
+  errorMessage = '';
 
-  formData: any = {
+  formData = {
     name: '',
     email: '',
     subject: '',
     message: ''
   };
 
-  sendEmail(): void {
-    const emailSubject = encodeURIComponent(this.formData.subject);
-    const emailBody = encodeURIComponent(
-      `Name: ${this.formData.name}\r\nEmail: ${this.formData.email}\r\nSubject: ${this.formData.subject}\r\nMessage: ${this.formData.message}`
-    );
-    window.location.href = `mailto:mathibeladineo1@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-    this.messageSent = true;
-    this.formData = { name: '', email: '', subject: '', message: '' };
+  async sendEmail(): Promise<void> {
+    if (this.isSubmitting) return;
+    this.isSubmitting = true;
+    this.errorMessage = '';
+
+    try {
+      await emailjs.send(
+        environment.emailjs.serviceId,
+        environment.emailjs.templateId,
+        {
+          from_name: this.formData.name,
+          from_email: this.formData.email,
+          subject: this.formData.subject,
+          message: this.formData.message
+        }
+      );
+      this.messageSent = true;
+      this.formData = { name: '', email: '', subject: '', message: '' };
+    } catch {
+      this.errorMessage = 'Something went wrong. Please email directly at mathibeladineo1@gmail.com';
+    } finally {
+      this.isSubmitting = false;
+    }
   }
 
   resetForm(): void {
     this.messageSent = false;
+    this.errorMessage = '';
   }
 }
