@@ -13,6 +13,7 @@ import { PdfService } from './pdf/pdf.service';
 
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     SkillsComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,

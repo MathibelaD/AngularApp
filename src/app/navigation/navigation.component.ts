@@ -15,6 +15,7 @@ export class NavigationComponent implements OnInit {
     { id: 'about', label: 'About', href: '#about' },
     { id: 'projects', label: 'Projects', href: '#projects' },
     { id: 'skills', label: 'Skills', href: '#skills' },
+    { id: 'courses', label: 'Courses', href: '#courses' },
     { id: 'contact', label: 'Contact', href: '#contact' }
   ];
 
@@ -34,7 +35,7 @@ export class NavigationComponent implements OnInit {
   }
 
   private updateActiveSection() {
-    const sections = ['home', 'about', 'projects', 'skills', 'contact'];
+    const sections = ['home', 'about', 'projects', 'skills', 'courses', 'contact'];
     const scrollPosition = window.pageYOffset + 100;
 
     for (const section of sections) {

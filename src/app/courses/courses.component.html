@@ -1,0 +1,55 @@
+<section class="py-16 bg-dark-50 relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+
+    <!-- Section Header -->
+    <div class="text-center mb-10 animate-fade-in">
+      <div class="flex justify-center mb-3">
+        <span class="section-label"><i class="fas fa-graduation-cap"></i> Knowledge Sharing</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark-900 mb-3">
+        Courses I've <span class="gradient-text">Created</span>
+      </h2>
+      <p class="text-base text-dark-500 max-w-xl mx-auto leading-relaxed">
+        Free, self-paced learning hubs I wrote to help others get into software development.
+      </p>
+    </div>
+
+    <!-- Course cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <a *ngFor="let course of courses; let i = index"
+         [href]="course.url" target="_blank" rel="noopener"
+         class="group flex gap-4 p-6 bg-white rounded-2xl border border-dark-100 hover-lift hover:border-primary-200 hover:shadow-lg transition-all duration-300 animate-slide-up"
+         [style.animation-delay]="(i * 0.15) + 's'">
+
+        <div class="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-white text-lg"
+             [style.background]="course.gradient">
+          <i [ngClass]="course.icon"></i>
+        </div>
+
+        <div class="flex flex-col min-w-0">
+          <span class="text-xs font-semibold uppercase tracking-wide text-dark-400 mb-0.5">{{ course.level }}</span>
+          <h3 class="text-lg font-bold text-dark-900 group-hover:text-primary-600 transition-colors duration-300 mb-1.5">
+            {{ course.title }}
+          </h3>
+          <p class="text-sm text-dark-500 leading-relaxed mb-3">{{ course.description }}</p>
+
+          <div class="flex flex-wrap gap-x-3 gap-y-1 text-xs text-dark-500 mb-4">
+            <span *ngFor="let stat of course.stats" class="flex items-center gap-1.5">
+              <span class="w-1 h-1 rounded-full bg-primary-400"></span>{{ stat }}
+            </span>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 mt-auto pt-3 border-t border-dark-100">
+            <span class="text-xs text-dark-400">
+              <i class="fas fa-hammer text-primary-400 mr-1"></i> Project: {{ course.projectName }}
+            </span>
+            <span class="flex items-center gap-1.5 text-sm font-semibold text-primary-600 whitespace-nowrap">
+              Start learning
+              <i class="fas fa-arrow-right text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
