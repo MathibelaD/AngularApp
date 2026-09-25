@@ -25,14 +25,6 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
-      name: "AmorNest",
-      image: "assets/images/amornest.jpg",
-      liveUrl: "https://amornest.vercel.app/",
-      badge: "Mobile App",
-      description: "A date-planning app for South African couples. It turns what your partner enjoys into date ideas with real costs in Rands, a budget tracker, a prep checklist and a calendar for the day.",
-      technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'Tailwind CSS']
-    },
-    {
       name: "QR Scanner",
       image: "assets/images/qrscanner.png",
       repoUrl: "https://github.com/MathibelaD/qr-doc-share",
@@ -43,13 +35,36 @@ export class ProjectsComponent {
       forks: 2
     },
     {
-      name: "School Management System",
-      image: "assets/images/project.webp",
-      repoUrl: "https://github.com/siphonhata/school_management",
-      description: "A comprehensive school management solution featuring student records, grade tracking, attendance management, and parent-teacher communication tools.",
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'TypeScript'],
-      stars: 15,
-      forks: 5
+      name: "AmorNest",
+      image: "assets/images/amornest.jpg",
+      liveUrl: "https://amornest.vercel.app/",
+      badge: "Mobile App",
+      description: "A date-planning app for South African couples. It turns what your partner enjoys into date ideas with real costs in Rands, a budget tracker, a prep checklist and a calendar for the day.",
+      technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'Tailwind CSS']
+    },
+    {
+      name: "FullStack Kotas",
+      image: "assets/images/fullstack-kotas.jpg",
+      liveUrl: "https://somemore-monate-galore-admin-5847.vercel.app/",
+      badge: "Full Platform",
+      description: "A restaurant platform for a kota business, built as a monorepo: a marketing site and a mobile ordering app for customers, sharing one Supabase backend with the admin dashboard.",
+      technologies: ['React', 'React Native', 'Expo', 'Supabase', 'TypeScript']
+    },
+    {
+      name: "SmartWebSync Solutions",
+      image: "assets/images/smartwebsync.jpg",
+      liveUrl: "https://www.smartwebsync.co.za/",
+      badge: "Co-founder",
+      description: "The website of the software company I co-founded. It has service pages, a portfolio of client work, a blog, and an admin area for managing that content.",
+      technologies: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS', 'Framer Motion']
+    },
+    {
+      name: "FullStack Kotas Admin",
+      image: "assets/images/kotas-admin.jpg",
+      liveUrl: "https://somemore-monate-galore-admin.vercel.app/",
+      badge: "Dashboard",
+      description: "The staff dashboard behind FullStack Kotas: live order tracking, menu and inventory management, waste and equipment tracking, customer reviews and sales analytics.",
+      technologies: ['Next.js', 'TypeScript', 'Supabase', 'Recharts', 'Tailwind CSS']
     }
   ];
 }

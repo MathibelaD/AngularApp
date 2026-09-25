@@ -17,9 +17,9 @@
     </div>
 
     <!-- Projects Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
       <div *ngFor="let project of projects; let i = index"
-           class="group bg-white rounded-2xl border border-dark-100 overflow-hidden hover-lift hover:border-primary-200 hover:shadow-xl transition-all duration-400 flex flex-col animate-slide-up"
+           class="group w-full md:w-[calc(50%-1rem)] lg:w-[calc((100%-4rem)/3)] bg-white rounded-2xl border border-dark-100 overflow-hidden hover-lift hover:border-primary-200 hover:shadow-xl transition-all duration-400 flex flex-col animate-slide-up"
            [style.animation-delay]="(i * 0.15) + 's'">
 
         <!-- Image -->
