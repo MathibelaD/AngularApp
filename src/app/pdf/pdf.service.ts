@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class PdfService {
     getPdf(): Observable<Blob> {
-        const pdfUrl = 'assets/Dineo-Mathibela-Resume.pdf';
+        const pdfUrl = 'assets/Dineo_Mathibela_CV.pdf';
         return new Observable<Blob>((observer) => {
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'blob';
